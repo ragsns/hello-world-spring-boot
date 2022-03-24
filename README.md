@@ -10,3 +10,10 @@ A Hello World Spring Boot app.
   - Set up Maven cache
   -  Allows caching dependencies and build outputs to improve workflow execution time.
   - Run Tests
+
+#2. Checkout to new branch "quesiton-2" 
+  - Created a dockerfile
+  - Build and run the image using below command
+  - sudo docker build -t javaimage -f Dockerfile .
+  - docker run -d -p  8080:8080 --name javatest javaimage:latest
+  - Pushed the branch in to github
