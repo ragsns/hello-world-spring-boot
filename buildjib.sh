@@ -4,4 +4,4 @@ set -x
 
 echo "creating image using pom.xml > Jib and running the docker container"
 
-mvn jib:dockerBuild
+mvn -f "pom.xml" jib:dockerBuild

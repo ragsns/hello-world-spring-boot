@@ -25,3 +25,10 @@ jobs:
         run: mvn -B clean package -DskipTests
       - name: Maven Verify
         run: mvn -B clean verify
+      - name: Unit test
+        run: mvn test
+      # Building docker image
+      - name: Building docker image
+        run: ../../buildjib.sh
+
+      
