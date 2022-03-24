@@ -26,3 +26,8 @@ A Hello World Spring Boot app.
    - Remove stopped container
    - Started container with already pulled image
    - verify the working
+
+
+#4. Using Jib
+  - plugin configured in pom.xml
+  - created script named buildjib.sh to compile using jib
