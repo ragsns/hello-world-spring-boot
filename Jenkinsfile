@@ -16,5 +16,15 @@ pipeline{
                 sh 'mvn package'
             }
         }
+        stage('DockerDeploy'){
+            steps{
+                sh 'docker build -t thetips4you/springboot:latest .'
+            }
+        }
+        stage('DeploytoCont'){
+            steps{
+                sh 'docker run -d --name cont1 thetips4you/springboot:latest'
+            }
+        }
     }
 }
