@@ -6,16 +6,6 @@ pipeline{
                 git 'https://github.com/hiyu12/hello-world-spring-boot.git'
             }
         }
-        stage('Maven Test'){
-            steps{
-                sh 'mvn test'
-            }
-        }
-        stage('Maven Build'){
-            steps{
-                sh 'mvn clean'
-            }
-        }
         stage('DockerDeploy'){
             steps{
                 sh 'docker build -t akash5791/springboot:latest .'
