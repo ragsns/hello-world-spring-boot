@@ -13,17 +13,17 @@ pipeline{
         }
         stage('Maven Build'){
             steps{
-                sh 'mvn package'
+                sh 'mvn clean'
             }
         }
         stage('DockerDeploy'){
             steps{
-                sh 'docker build -t thetips4you/springboot:latest .'
+                sh 'docker build -t akash5791/springboot:latest .'
             }
         }
         stage('DeploytoCont'){
             steps{
-                sh 'docker run -d --name cont1 thetips4you/springboot:latest'
+                sh 'docker run -d --name cont1 akash5791/springboot:latest'
             }
         }
     }
