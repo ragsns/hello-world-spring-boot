@@ -5,19 +5,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-				java -jar /myproject-0.0.1-SNAPSHOT.jar
+				"java -jar /myproject-0.0.1-SNAPSHOT.jar".execute().text
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-				java -jar /myproject-0.0.1-SNAPSHOT.jar
+				"java -jar /myproject-0.0.1-SNAPSHOT.jar".execute().text
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-				java -jar /myproject-0.0.1-SNAPSHOT.jar
+				"java -jar /myproject-0.0.1-SNAPSHOT.jar".execute().text
             }
         }
     }
