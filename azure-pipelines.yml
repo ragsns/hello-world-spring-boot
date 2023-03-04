@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool: Default
+pool: Titaniam
 
 stages:
 - stage: Build
