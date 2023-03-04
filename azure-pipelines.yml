@@ -12,7 +12,8 @@ stages:
 - stage: Build
   displayName: Build Java project
   jobs:
-  - job: A1
+  - job: Build
+    displayName: Build Maven Project
     steps:
       - task: Maven@4
         inputs:
@@ -23,3 +24,16 @@ stages:
           mavenAuthenticateFeed: false
           effectivePomSkip: false
           sonarQubeRunAnalysis: false
+  # - job: Docker
+  #   displayName: Create Docker Image
+  #   steps:
+  #     - task: Maven@4
+  #       inputs:
+  #         mavenPomFile: 'pom.xml'
+  #         publishJUnitResults: false
+  #         javaHomeOption: 'JDKVersion'
+  #         mavenVersionOption: 'Default'
+  #         mavenAuthenticateFeed: false
+  #         effectivePomSkip: false
+  #         sonarQubeRunAnalysis: false
+      
